@@ -91,3 +91,9 @@
 (after! org
   (setq org-agenda-span 'day)        ; Set the agenda to show one day
   (setq org-agenda-start-day "0d"))  ; Start the agenda from today
+
+(map! :after org
+      :map org-mode-map
+      "s-<return>" #'org-meta-return)
+
+
