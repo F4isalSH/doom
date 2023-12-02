@@ -94,5 +94,5 @@
 
 (map! :after org
       :map org-mode-map
-      "s-<return>" #'org-meta-return)
+      "C-<return>" #'org-meta-return)
 
