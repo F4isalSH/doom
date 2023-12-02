@@ -96,4 +96,9 @@
       :map org-mode-map
       "s-<return>" #'org-meta-return)
 
-
+(setq mac-command-modifier      'control
+      ns-command-modifier       'control
+      mac-option-modifier       'meta
+      ns-option-modifier        'meta
+      mac-right-option-modifier 'meta
+      ns-right-option-modifier  'meta)
