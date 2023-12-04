@@ -96,3 +96,5 @@
       :map org-mode-map
       "C-<return>" #'org-meta-return)
 
+
+(setq org-agenda-files '("~/org/todos/"))
