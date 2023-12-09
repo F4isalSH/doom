@@ -98,3 +98,7 @@
 
 
 (setq org-agenda-files '("~/org/todos/"))
+
+
+(after! evil
+  (setq evil-escape-key-sequence "jj"))
