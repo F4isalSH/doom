@@ -102,3 +102,7 @@
 
 (after! evil
   (setq evil-escape-key-sequence "jj"))
+
+
+(after! org
+  (setq org-image-actual-width '(700)))
