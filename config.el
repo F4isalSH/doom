@@ -106,3 +106,8 @@
 
 (after! org
   (setq org-image-actual-width '(700)))
+
+
+(after! org
+  (run-with-timer 0 180 'org-save-all-org-buffers))
+
