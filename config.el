@@ -109,5 +109,5 @@
 
 
 (after! org
-  (run-with-timer 0 180 'org-save-all-org-buffers))
+  (run-with-timer 0 60 'org-save-all-org-buffers))
 
