@@ -111,3 +111,15 @@
 (after! org
   (run-with-timer 0 60 'org-save-all-org-buffers))
 
+(defun my/org-agenda-bulk-schedule-preserve-time ()
+  "Bulk schedule marked tasks in Org Agenda to a new date, preserving original times."
+  (interactive)
+  (let* ((new-date (org-read-date nil 'to-time nil "New schedule date:"))
+         (new-day (time-to-days new-date)))
+    (org-agenda-bulk-action (lambda ()
+      (let* ((scheduled (org-get-scheduled-time (point)))
+             (current-day (time-to-days scheduled))
+             (delta-days (- new-day current-day))
+             (new-time (when scheduled (time-add scheduled (days-to-time delta-days)))))
+        (when new-time
+          (org-schedule nil (format-time-string "%Y-%m-%d %H:%M" new-time))))))))
